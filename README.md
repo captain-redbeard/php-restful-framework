@@ -1,5 +1,5 @@
 # php-restful-framework
-PHP RESTful based framework with requests and responses in JSON formatted.
+PHP RESTful based framework with requests and responses in JSON format.
 
 ---
 
@@ -18,7 +18,7 @@ Accept-Encoding: gzip, deflate
 HTTP/1.1 200 OK
 Date: Sun, 20 Nov 2016 03:58:12 GMT
 Server: Apache/2.4.18 (Ubuntu)
-**Allow: GET,PUT,POST,DELETE,OPTIONS,HEAD**
+Allow: GET,PUT,POST,DELETE,OPTIONS,HEAD
 Content-Length: 0
 Content-Type: application/json; charset=UTF-8
 ```
@@ -31,7 +31,7 @@ Host: localhost
 Accept: */*
 Accept-Encoding: gzip, deflate
 
-**HTTP/1.1 200 OK**
+HTTP/1.1 200 OK
 Date: Sun, 20 Nov 2016 03:58:12 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Content-Type: application/json; charset=UTF-8
@@ -171,6 +171,23 @@ Content-Type: application/json; charset=UTF-8
 ### Response Codes
 All responses will contain the appropriate HTTP code.
 
+###### Success
+If a method is successful a 200 OK response code will be returned.
+
+```
+OPTIONS /api/example HTTP/1.1
+Host: localhost
+Accept: */*
+Accept-Encoding: gzip, deflate
+
+HTTP/1.1 200 OK
+Date: Sun, 20 Nov 2016 03:58:12 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Allow: GET,PUT,POST,DELETE,OPTIONS,HEAD
+Content-Length: 0
+Content-Type: application/json; charset=UTF-8
+```
+
 ###### Method not found
 If a method is not found a 404 not found response code will be returned.
 
@@ -180,7 +197,7 @@ Host: localhost
 Accept: */*
 Accept-Encoding: gzip, deflate
 
-**HTTP/1.1 404 Not Found**
+HTTP/1.1 404 Not Found
 Date: Sun, 20 Nov 2016 04:11:22 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Content-Length: 121
@@ -204,7 +221,7 @@ Accept-Encoding: gzip, deflate
 Content-Length: 113
 Content-Type: application/json; charset=UTF-8
 
-**HTTP/1.1 403 Forbidden**
+HTTP/1.1 403 Forbidden
 Date: Sun, 20 Nov 2016 04:15:24 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Content-Length: 95
@@ -227,7 +244,7 @@ Accept: */*
 Accept-Encoding: gzip, deflate
 Authenticates: abc
 
-**HTTP/1.1 401 Unauthorized**
+HTTP/1.1 401 Unauthorized
 Date: Sun, 20 Nov 2016 04:17:15 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Content-Length: 130
