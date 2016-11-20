@@ -18,21 +18,21 @@
  *      automatically works out the data type.
  *  - query, variables, mysqli connection
  * 
-	 
- $examples = QB::select("SELECT name, type, size, file 
-		 
-							FROM files 
-								
-							WHERE status = ? 
-							AND cancelled = ? 
-								
-								
-							ORDER BY name 
-							LIMIT 10;", 
-								
-							array("example",0), 
-							
-							$mysqli);
+ *	 
+ * $examples = QB::select("SELECT name, type, size, file 
+ *		 
+ *							FROM files 
+ *								
+ *							WHERE status = ? 
+ *							AND cancelled = ? 
+ *								
+ *								
+ *							ORDER BY name 
+ *							LIMIT 10;", 
+ *								
+ *							array("example",0), 
+ *							
+ *							$mysqli);
  * 
  * 
  * 
