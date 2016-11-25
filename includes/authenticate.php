@@ -5,7 +5,7 @@
  * This is an example authentication method, it should be updated to 
  * use your own methods.
  * 
- * Modified: 20-Nov-2016
+ * Modified: 25-Nov-2016
  * Made Date: 19-Nov-2016
  * Author: Hosvir
  * 
@@ -31,7 +31,7 @@ function authenticate($PARAMS = null, $authenticate) {
 	if($authkey == null) {
 		return array(
 					"status" => ERRORSTATUS, 
-					"code" => 1002, 
+					"code" => 401, 
 					"message" => "Missing parameters. Expected {authkey}"
 					);
 	}
@@ -43,12 +43,21 @@ function authenticate($PARAMS = null, $authenticate) {
 	// ================================
 
 	//Result
-	return array(
-				"status" => SUCCESSSTATUS, 
-				"code" => 0, 
-				"message" => "Authentication.", 
-				"results" => array("authenticate" => $loginresult)
-				);
+	if($loginresult) {
+		return array(
+					"status" => SUCCESSSTATUS, 
+					"code" => 200, 
+					"message" => "Authentication.", 
+					"results" => array("authenticate" => $loginresult)
+					);
+	}else{
+		return array(
+					"status" => ERRORSTATUS, 
+					"code" => 401, 
+					"message" => "Authentication failed.", 
+					"results" => array("authenticate" => $loginresult)
+					);
+	}
 }
 
 ?>

@@ -4,7 +4,7 @@
  * Details:
  * RESTful web service using JSON.
  * 
- * Modified: 20-Nov-2016
+ * Modified: 25-Nov-2016
  * Made Date: 19-Nov-2016
  * Author: Hosvir
  * 
@@ -91,7 +91,7 @@ if($method != null) {
 				http_response_code(403);
 				$result = array(
 								"status" => ERRORSTATUS, 
-								"code" => 1003, 
+								"code" => 403, 
 								"message" => "Request Method not allowed: {" . $requestmethod . "}"
 								);
 			}
@@ -103,7 +103,7 @@ if($method != null) {
 		http_response_code(404);
 		$result = array(
 						"status" => ERRORSTATUS, 
-						"code" => 1001, 
+						"code" => 404, 
 						"message" => "Unknown method. Expected {method}"
 						);
 	}

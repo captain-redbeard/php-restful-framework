@@ -4,7 +4,7 @@
  * Details:
  * This is an example method showing the requirements for all methods.
  * 
- * Modified: 20-Nov-2016
+ * Modified: 25-Nov-2016
  * Made Date: 19-Nov-2016
  * Author: Hosvir
  * 
@@ -94,7 +94,7 @@ class method extends restMethod {
 		
 		return array(
 					"status" => SUCCESSSTATUS, 
-					"code" => 0, 
+					"code" => 200, 
 					"message" => "Retrieved example.", 
 					"results" => $examples
 					);
@@ -139,7 +139,7 @@ class method extends restMethod {
 				if($modifiedStart == $modifiedEnd) {
 					$result = array(
 								"status" => SUCCESSSTATUS, 
-								"code" => 0, 
+								"code" => 200, 
 								"message" => "Updated file.", 
 								"results" => $modifiedEnd
 								);
@@ -157,7 +157,7 @@ class method extends restMethod {
 				
 				$result = array(
 								"status" => SUCCESSSTATUS, 
-								"code" => 0, 
+								"code" => 200, 
 								"message" => "Created file."
 								);
 			}
@@ -203,7 +203,7 @@ class method extends restMethod {
 				
 			$result = array(
 							"status" => SUCCESSSTATUS, 
-							"code" => 0, 
+							"code" => 200, 
 							"message" => "Created file.", 
 							"results" => $name . "-" . $rstring . "." . $extension
 							);
@@ -243,7 +243,7 @@ class method extends restMethod {
 				
 			$result = array(
 							"status" => SUCCESSSTATUS, 
-							"code" => 0, 
+							"code" => 200, 
 							"message" => "Deleted file.", 
 							"results" => $deleted
 							);
