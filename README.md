@@ -53,7 +53,7 @@ Content-Type: application/json; charset=UTF-8
 
 {
     "status": "success",
-    "code": 0,
+    "code": 200,
     "message": "Retrieved example.",
     "results": {
         "files": [
@@ -109,7 +109,7 @@ Content-Type: application/json; charset=UTF-8
 
 {
     "status": "success",
-    "code": 0,
+    "code": 200,
     "message": "Updated file.",
     "results": 1479612648
 }
@@ -134,7 +134,7 @@ Content-Type: application/json; charset=UTF-8
 
 {
     "status": "success",
-    "code": 0,
+    "code": 200,
     "message": "Created file.",
     "results": "Example-0ecmHC.txt"
 }
@@ -160,7 +160,7 @@ Content-Type: application/json; charset=UTF-8
 
 {
     "status": "success",
-    "code": 0,
+    "code": 200,
     "message": "Deleted file.",
     "results": true
 }
@@ -205,7 +205,7 @@ Content-Type: application/json; charset=UTF-8
 
 {
     "status": "error",
-    "code": 1001,
+    "code": 404,
     "message": "Unknown method. Expected {method}"
 }
 ```
@@ -229,7 +229,7 @@ Content-Type: application/json; charset=UTF-8
 
 {
     "status": "error",
-    "code": 1003,
+    "code": 403,
     "message": "Request Method not allowed: {PUT}"
 }
 ```
@@ -252,7 +252,7 @@ Content-Type: application/json; charset=UTF-8
 
 {
     "status": "error",
-    "code": 1002,
+    "code": 401,
     "message": "Missing parameters. Expected {authkey}"
 }
 ```
